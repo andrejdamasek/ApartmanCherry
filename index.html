@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Apartman Cherry - Smještaj u Višnjecu</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap">
+<script src="scripts/script.js"></script>
+</head>
+<body>    
+
+    <h1>Apartman Cherry <br>*****</h1>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#dobrodosli">Početna</a></li>
+            <li><a href="#slike">Galerija</a></li>  
+            <li><a href="#cijena">Cijenik</a></li>  
+            <li><a href="#lokacija">Lokacija</a></li> 
+            <li><a href="#kontakt">Kontakt</a></li>                  
+        </ul>
+    </nav>
+
+    
+    <p id="dobrodosli">
+        <b>Dragi gosti,</b><br><br>
+        Dobrodošli u naš apartman, gdje se luksuz susreće s udobnošću.<br> Uživajte u ekskluzivnom iskustvu dizajniranom da zadovolji sve vaše potrebe.<br>
+        Naš spa dio, savršeno osmišljen za opuštanje, a sadrži:<br>
+        jacuzzi – mjesto gdje ćete se prepustiti toplim mjehurićima i riješiti se stresa<br>
+        saunu/Tursku kupelj – idealnu za detoksikaciju i potpuno opuštanje vašeg tijela i uma.<br>
+        Uz pažljivo izabrane detalje i vrhunsku uslugu, svaki trenutak u našem apartmanu postaje nezaboravan.<br> Dopustite sebi opuštanje i odmor, te bijeg od svakodnevice.
+        <br> Rado vas očekujemo i stojimo vam na raspolaganju za sva pitanja ili dodatne želje koje imate. <br><br>
+        Vaše zadovoljstvo je naša najveća nagrada!<br><br>
+        <b>Dobrodošli i uživajte!<br>
+        <i>Apartman Cherry </i> </b>
+    </p>
+    
+    <h2 class="naslov" id="slike">Galerija</h2>
+    <ul class="galerija">
+        <li><img src="images/kada.jpg" alt="Hidromasažna kada"></li>
+        <li><img src="images/kada2.jpg" alt="Hidromasažna kada"></li>
+        <li><img src="images/kada3.jpg" alt="Hidromasažna kada"></li>
+        <li><img src="images/sauna.jpg" alt="Parna sauna"></li>
+        <li><img src="images/spavaca.jpg" alt="Spavaća soba"></li>
+        <li><img src="images/dvoriste.jpg" alt="Dvorište"></li>
+        <li><img src="images/ulaz.jpg" alt="Prostor ulaza"></li>
+        <li><img src="images/ulaz2.jpg" alt="Prostor ulaza"></li>
+        <li><img src="images/ulaznavrata.jpg" alt="Ulaz u objekt "></li>    
+        <li><img  src="images/dnevna.jpg" alt="Dnevna soba"></li>  
+        <li><img src="images/dnevna2.jpg" alt="Dnevna soba"></li>          
+        <li><img src="images/Snimka zaslona 2025-01-13 222847.png" alt="info"></li>
+    </ul> 
+
+
+    <div id="cijena" class="pricing-container">
+        <h1>Cjenik za apartman</h1>
+        <div class="pricing">
+            <div class="price-option">
+                <h2>1 noć / 2 osobe</h2>
+                <p>Cijena: 240€</p>
+            </div>
+            <div class="price-option">
+                <h2>2 ili više noći / 2 osobe</h2>
+                <p>Popust: 15%</p>
+            </div>
+            <h2>Izračunajte cijenu Vašeg boravka</h2>
+            <form id="days-form" onsubmit="calculatePrice(event)">
+                <label for="days">Odaberite broj noći:</label>
+                <input type="number" id="days" name="days" min="1" value="1" required>
+                <button type="submit">Izračunaj cijenu</button>
+            </form>
+        
+            <p id="total-price">Cijena: 240€</p>
+        </div>
+    </div>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11454.706787449733!2d18.627166398347715!3d45.56679328954488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce76d44ab2df9%3A0x9cdcb5cdfc7b26ba!2sApartman%20Cherry!5e0!3m2!1shr!2shr!4v1733826856571!5m2!1shr!2shr"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="lokacija"></iframe>
+
+
+   <div class="container" id="kontakt">
+        <h1>Kontakt</h1>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Pošaljite Vaš upit</h3>
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <input type="hidden" name="access_key" value="dc2b8e80-bd7f-40a4-8580-784050159dc8">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Ime</label>
+                            <input type="text" name="ime" placeholder="Vaše ime"  class="contact-inputs" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Vaš email" class="contact-inputs" required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Telefon</label>
+                            <input type="text" name="telefon" p placeholder="+385 11 111 1111" class="contact-inputs" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Broj osoba</label>
+                            <input type="text" name="naslov"  placeholder="2 osobe" class="contact-inputs" required>
+                        </div>
+
+                    </div>
+                     <label>Poruka</label>
+                     <textarea  row="3" name="poruka" pplaceholder="Vaša poruka" class="contact-inputs" required></textarea>  
+                    <!-- za detekciju botova -->
+                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> 
+                     
+                    <button type="submit" id="slanje">Pošalji</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>Informacije o nama</h3>
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td>apartmancherry13@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Kontakt broj:</td>
+                        <td>+385 98 435 071</td>
+                    </tr>
+                    <tr>
+                        <td>Adresa: </td>
+                        <td>Bana Josipa Jelačića 13a, Višnjevac 31220</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+   </div>
+
+</body>
+</html>
