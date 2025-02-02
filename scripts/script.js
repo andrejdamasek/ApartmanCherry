@@ -1,5 +1,5 @@
 function calculatePrice(event) {
-    event.preventDefault(); // Sprečava ponovno učitavanje stranice
+    event.preventDefault(); 
     const days = document.getElementById("days").value;
     const basePrice = 240;
     let totalPrice;
@@ -13,7 +13,6 @@ function calculatePrice(event) {
 }
 
 window.onload = function() {
-    // Reset the form fields when the page loads
     document.getElementById("form").reset();
 };
 

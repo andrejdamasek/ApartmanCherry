@@ -15,25 +15,20 @@ h1{
     font-size:50px;
 }
 
-.naslov {
-    padding-top: 50px;
-    text-align:center;
-    color:hwb(186, 47, 47);
-    margin-bottom: 10px;
-}
-
 p{
     margin-left: 20px;
     text-align: center;
 }
 
+
+
 .navbar {
-    position: fixed; /* Fiksira navigaciju na ekranu */
-    top: 0; /* Pozicionira na vrh ekrana */
+    position: fixed; 
+    top: 0; 
     left: 0;
-    width: 100%; /* Širina cijelog ekrana */
+    width: 100%; 
     padding:  0;
-    z-index: 1000; /* Osigurava da bude iznad drugih elemenata */
+    z-index: 1; 
     font-size:20px;
 }
 
@@ -43,6 +38,14 @@ p{
     padding-left: 20px;
     margin: 0px;
     overflow: hidden;
+}
+
+.navbar li{
+    float: left;
+}
+
+.navbar li :first-child{
+    margin-left: 5%;
 }
 
 .navbar a{
@@ -57,17 +60,19 @@ p{
     background-color: hsl(0, 0%, 10%);
 }
 
-.navbar li{
-    float: left;
-}
-.navbar li :first-child{
-    margin-left: 5%;
+
+
+
+.naslov {
+    padding-top: 50px;
+    text-align:center;
+    margin-bottom: 10px;
 }
 
 .galerija {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 stupca za veće ekrane */
-    gap: 10px; /* Razmak između slika */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
     list-style: none;
     padding: 0;
     margin: 20px;
@@ -78,130 +83,15 @@ p{
 }
 
 .galerija img {
-    width: 100%; /* Prilagođavanje širine okvira */
-    height: auto; /* Zadržavanje proporcija */
+    width: 100%; 
+    height: auto; 
     display: block;
-    object-fit: cover; /* Slika ispunjava okvir bez praznina */
-    aspect-ratio: 3 / 4; /* Omjer slike za konzistentnu visinu */
+    object-fit: cover; 
+    aspect-ratio: 3 / 4; 
 }
 
-@media (max-width: 1024px) {
-    .galerija {
-        grid-template-columns: repeat(2, 1fr); /* 2 stupca za ekrane manja od 1024px */
-    }
-}
 
-@media (max-width: 480px) {
-    .galerija {
-        grid-template-columns: 1fr; /* 1 stupac za vrlo male ekrane */
-    }
-}
 
-.container{
-    width:80%;
-    margin:50px auto;
-}
-
-.container h1{
-    text-align: left;
-    padding-top: 40px;
-}
-
-.contact-box{
-    background: white;
-    display: flex;
-}
-
-.contact-left{
-    flex-basis: 60%;
-    padding: 40px 60px;
-}
-
-.contact-left h3{
-    color: hwb(0 8% 35%);
-    font-weight:600 ;
-    margin-bottom:30px ;
-}
-
-.contact-right{
-    flex-basis: 40%;
-    padding: 40px ;
-    background: hwb(0 8% 35%);
-    color:white;
-}
-.contact-right h3{
-    font-weight:600 ;
-    margin-bottom:30px ;
-}
-
-.input-row{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.input-row .input-group{
-    flex-basis:45% ;
-
-}
-
-input{
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline: none;
-    padding-bottom:5px ;
-}
-
-textarea{
-    width: 100%;
-    border:1px solid #ccc;
-    outline:none;
-    padding: 10px;
-    box-sizing: border-box;
-    height: 140px;
-}
-
-label{
-    margin-bottom:6px ;
-    margin-right: 10px;
-    color:  hwb(0 8% 35%);
-}
-
-button{
-    background: hwb(0 8% 35%);
-    color: white;    
-    width: 170px;      
-    height: 35px;       
-    padding: 10px 20px;
-    font-size: 16px;    
-    outline: none;
-    border: none;
-    border-radius:30px ;
-    cursor: pointer;    
-    margin-left: 10px;
-    margin-top:20px ;    
-}
-
-button:hover {
-    background-color: hsl(0, 0%, 10%);
-}
-
-tr td:first-child{
-    padding-right: 20px;
-}
-
-tr td{
-    padding-top:20px ;
-}
-
-iframe{
-    padding: 10px;
-    margin: 10px;
-    width: 98%;
-    height: 500px;
-    min-height: 400px;
-}
 
 .pricing-container {
     max-width: 800px;
@@ -234,18 +124,12 @@ iframe{
     font-size:20px;
 }
 
-#days-form {
-    margin-top: 15px;
-}
-
-#days-form label {
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-label, input[type="number"] {
-    display: inline-block;
-    vertical-align: middle;
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom:5px ;
 }
 
 input[type="number"] {
@@ -256,8 +140,136 @@ input[type="number"] {
     border-radius: 4px;
 }
 
+label{
+    margin-bottom:6px ;
+    margin-right: 10px;
+    color:  hwb(0 8% 35%);
+}
+
+label, input[type="number"] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 #total-price {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+}
+
+
+
+
+iframe{
+    padding: 10px;
+    margin: 10px;
+    width: 98%;
+    height: 500px;
+    min-height: 400px;
+}
+
+
+
+
+
+.container{
+    width:80%;
+    margin:50px auto;
+}
+
+.container h1{
+    text-align: left;
+    padding-top: 40px;
+}
+
+.contact-box{
+    background: white;
+    display: flex;
+}
+
+.contact-left{
+    flex-basis: 65%;
+    padding: 40px 60px;
+}
+
+.contact-left h3{
+    color: hwb(0 8% 35%);
+    font-weight:600 ;
+    margin-bottom:30px ;
+}
+
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group{
+    flex-basis:45% ;
+
+}
+
+textarea{
+    width: 100%;
+    border:1px solid #ccc;
+    outline:none;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 140px;
+}
+
+
+
+.contact-right{
+    flex-basis: 35%;
+    padding: 40px ;
+    background: hwb(0 8% 35%);
+    color:white;
+}
+
+.contact-right h3{
+    font-weight:600 ;
+    margin-bottom:30px ;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top:20px ;
+}
+
+
+button{
+    background: hwb(0 8% 35%);
+    color: white;    
+    width: 170px;      
+    height: 35px;       
+    padding: 10px 20px;
+    font-size: 16px;    
+    outline: none;
+    border: none;
+    border-radius:30px ;
+    cursor: pointer;    
+    margin-left: 10px;
+    margin-top:20px ;    
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+
+@media (max-width: 480px) {
+    .galerija {
+        grid-template-columns: 1fr; /* 1 stupac za vrlo male ekrane */
+    }       
+}
+
+@media (max-width: 1024px) {
+    .galerija {
+        grid-template-columns: repeat(2, 1fr); /* 2 stupca za ekrane manja od 1024px */
+    }
 }
