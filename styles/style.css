@@ -262,14 +262,16 @@ button:hover {
 }
 
 
+
+
 @media (max-width: 480px) {
     .galerija {
-        grid-template-columns: 1fr; /* 1 stupac za vrlo male ekrane */
+        grid-template-columns: 1fr; 
     }       
 }
 
 @media (max-width: 1024px) {
     .galerija {
-        grid-template-columns: repeat(2, 1fr); /* 2 stupca za ekrane manja od 1024px */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
